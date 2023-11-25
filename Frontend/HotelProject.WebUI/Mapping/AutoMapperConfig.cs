@@ -6,6 +6,8 @@ using HotelProject.WebUI.Dtos.LoginDto;
 using HotelProject.WebUI.Dtos.AboutDto;
 using HotelProject.WebUI.Dtos.RoomDto;
 using HotelProject.WebUI.Dtos.Testimonial;
+using HotelProject.WebUI.Dtos.StaffDto;
+using HotelProject.WebUI.Dtos.SubscribeDto;
 
 namespace HotelProject.WebUI.Mapping
 {
@@ -26,6 +28,8 @@ namespace HotelProject.WebUI.Mapping
             CreateMap<ResultRoomDto,Room>().ReverseMap();
             
             CreateMap<ResultTestimonialDto,Testimonial>().ReverseMap();
+            CreateMap<ResultStaffDto,Staff>().ReverseMap(); 
+            CreateMap<CreateSubscribeDto,Subscribe>().ReverseMap();
         }
     }
 }
