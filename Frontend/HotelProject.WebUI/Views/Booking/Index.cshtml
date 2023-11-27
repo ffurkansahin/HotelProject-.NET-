@@ -17,7 +17,7 @@
         <!-- Header End -->
         @await Component.InvokeAsync("_BookingCoverPartial")
         <!-- Booking Start -->
-        @await Component.InvokeAsync("_ReservationPartial")
+        @* @await Component.InvokeAsync("_ReservationPartial") *@
 
         @await Html.PartialAsync("/Views/Booking/AddBooking.cshtml")
 
