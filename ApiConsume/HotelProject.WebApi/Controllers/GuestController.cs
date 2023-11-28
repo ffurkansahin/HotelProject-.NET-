@@ -41,7 +41,7 @@ namespace HotelProject.WebApi.Controllers
             _guestService.TUpdate(guest);
             return Ok();
         }
-        [HttpPost("{id}")]
+        [HttpGet("{id}")]
         public IActionResult GetGuest(int id)
         {
             var value = _guestService.TGetByID(id);
