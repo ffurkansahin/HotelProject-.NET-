@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IGuestService : IGuestService<Guest>
+    public interface IGuestService : IGenericService<Guest>
     {
     }
 }

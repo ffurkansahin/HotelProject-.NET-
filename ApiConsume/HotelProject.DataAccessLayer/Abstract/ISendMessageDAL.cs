@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.BusinessLayer.Abstract
+namespace HotelProject.DataAccessLayer.Abstract
 {
-    public interface ITestimonialService : IGenericService<Testimonial>
+    public interface ISendMessageDAL : IGenericDAL<SendMessage>
     {
     }
 }
