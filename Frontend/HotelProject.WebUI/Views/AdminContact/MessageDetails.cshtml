@@ -1,9 +1,8 @@
-﻿@model List<InboxContactDto>
+﻿@model GetMessageByIDDto
 @{
-    ViewData["Title"] = "Inbox";
+    ViewData["Title"] = "MessageDetails";
     Layout = "~/Views/AdminLayoutController/_AdminLayout.cshtml";
 }
-
 
 <div class="col-lg-12">
     <div class="card">
@@ -22,25 +21,33 @@
                         </button>
                     </div>
                 </div>
-                <div class="email-list m-t-15">
-                    @foreach (var item in Model)
-                    {                                        
-                    <div class="message">
-                            <a href="/AdminContact/MessageDetailsByInbox/@item.ContactID">
-                            <div class="col-mail col-mail-1">
-                                <div class="email-checkbox">
-                                    <input type="checkbox" id="chk2">
-                                    <label class="toggle" for="chk2"></label>
-                                </div><span class="star-toggle ti-star"></span>
-                            </div>
-                            <div class="col-mail col-mail-2">
-                                <div class="subject">@item.Message.Substring(0,30) ...</div>
-                            </div>
-                        </a>
+
+                <div class="read-content">
+                    <div class="media pt-5">
+                        <img class="mr-3 rounded-circle" src="~/adminweb/images/avatar/1.jpg">
+                        <div class="media-body">
+                            <h5 class="m-b-3">@Model.ReceiverName</h5>
+                            <p class="m-b-2">@(((DateTime)Model.Date).ToString("dd-MMM-yyyy"))</p>
+                        </div>
+
                     </div>
-                    }
+                    <hr>
+                    <div class="media mb-4 mt-1">
+                        <div class="media-body">
+                            <h4 class="m-0 text-primary">@Model.Title</h4><small class="text-muted">Kime : @Model.ReceiverMail</small>
+                        </div>
+                    </div>
+                    <h5 class="m-b-15">Merhaba, @Model.ReceiverName,</h5>
+                    <p>@Model.Content </p>
+
+                    <hr>
+
+                    <hr>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
+
