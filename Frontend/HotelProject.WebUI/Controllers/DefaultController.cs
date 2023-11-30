@@ -1,5 +1,6 @@
 ﻿using HotelProject.EntityLayer.Concrete;
 using HotelProject.WebUI.Dtos.SubscribeDto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Newtonsoft.Json;
@@ -7,6 +8,7 @@ using System.Text;
 
 namespace HotelProject.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         public readonly IHttpClientFactory _httpClientFactory;

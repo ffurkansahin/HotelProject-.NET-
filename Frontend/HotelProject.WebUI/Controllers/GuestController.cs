@@ -5,6 +5,7 @@ using System.Text;
 
 namespace HotelProject.WebUI.Controllers
 {
+
     public class GuestController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

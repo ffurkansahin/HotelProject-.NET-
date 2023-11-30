@@ -2,10 +2,9 @@
 
 namespace HotelProject.WebUI.Controllers
 {
-    public class RoomController : Controller
+    public class ErrorPageController : Controller
     {
-
-        public IActionResult Index()
+        public IActionResult Error404()
         {
             return View();
         }
