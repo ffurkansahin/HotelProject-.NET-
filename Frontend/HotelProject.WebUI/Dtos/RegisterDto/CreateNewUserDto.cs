@@ -22,5 +22,6 @@ namespace HotelProject.WebUI.Dtos.RegisterDto
         [Required(ErrorMessage = "Şifre tekrar alanı boş geçilemez")]
         [Compare("Password",ErrorMessage ="Şifreler uyuşmuyor")]
         public string? ConfirmPassword { get; set; }
+        public int WorkLocationID { get; set; }
     }
 }

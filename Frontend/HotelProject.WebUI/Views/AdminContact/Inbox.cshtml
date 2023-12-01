@@ -10,7 +10,26 @@
         <div class="card-body">
             <div class="email-left-box">
                 <a href="/AdminContact/AddSendMessage/" class="btn btn-primary btn-block">Yeni Mesaj Oluştur</a>
-                @await Html.PartialAsync("SideBarAdminContactPartial")
+
+                <div class="mail-list mt-4">
+                    <a href="/AdminContact/Inbox/" class="list-group-item border-0 text-primary p-r-0"><i class="fa fa-inbox font-18 align-middle mr-2"></i> <b>Gelen Kutusu</b> <span class="badge badge-primary badge-sm float-right m-t-5">@ViewBag.contactCount</span> </a>
+
+                    <a href="/AdminContact/Sendbox/" class="list-group-item border-0 text-success p-r-0">
+                        <i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Giden Kutusu
+                        <span class="badge badge-success badge-sm float-right m-t-5">@ViewBag.sendMessageCount</span>
+                    </a>
+
+                    <a href="#" class="list-group-item border-0 p-r-0">
+                        <i class="fa fa-star-o font-18 align-middle mr-2"></i>Önemli
+                        <span class="badge badge-danger badge-sm float-right m-t-5">17</span>
+                    </a>
+
+                    <a href="#" class="list-group-item border-0 p-r-0"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Taslaklar</a>
+
+                    <a href="#" class="list-group-item border-0 p-r-0"><i class="fa fa-trash font-18 align-middle mr-2"></i>Çöp Kutusu</a>
+                </div>a
+
+                @*@Html.Partial("SideBarAdminContactPartial", new ViewDataDictionary { { "key", value }, { "key2", value2 }  })*@
                 <h5 class="mt-5 m-b-10">Kategoriler</h5>
                 @await Html.PartialAsync("SideBarAdminContactCategoryPartial")
             </div>

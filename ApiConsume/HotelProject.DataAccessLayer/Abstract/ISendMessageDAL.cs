@@ -9,5 +9,6 @@ namespace HotelProject.DataAccessLayer.Abstract
 {
     public interface ISendMessageDAL : IGenericDAL<SendMessage>
     {
+        public int GetSendMessageCount();
     }
 }

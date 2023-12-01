@@ -45,6 +45,14 @@ namespace HotelProject.WebApi
             builder.Services.AddScoped<ISendMessageService,SendMessageManager>();
             builder.Services.AddScoped<ISendMessageDAL,EfSendMessageDAL>();
 
+            builder.Services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
+            builder.Services.AddScoped<IMessageCategoryDAL, EfMessageCategoryDAL>();
+            
+            builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
+            builder.Services.AddScoped<IWorkLocationDAL, EfWorkLocationDAL>();
+
+
+
             builder.Services.AddAutoMapper(typeof(Program));
 
             builder.Services.AddCors(opt =>

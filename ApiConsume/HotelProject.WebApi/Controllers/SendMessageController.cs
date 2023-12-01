@@ -46,5 +46,10 @@ namespace HotelProject.WebApi.Controllers
             var value= _sendMessageService.TGetByID(id);
             return Ok(value);
         }
+        [HttpGet("GetSendMessageCount")]
+        public IActionResult GetSendMessageCount()
+        {
+            return Ok(_sendMessageService.TGetSendMessageCount());
+        }
     }
 }

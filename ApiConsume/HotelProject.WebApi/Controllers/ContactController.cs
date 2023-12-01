@@ -17,7 +17,7 @@ namespace HotelProject.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddContact(Contact contact) 
+        public IActionResult AddContact(Contact contact)
         {
             contact.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             _contactService.TInsert(contact);
@@ -30,10 +30,15 @@ namespace HotelProject.WebApi.Controllers
             return Ok(values);
         }
         [HttpGet("{id}")]
-        public IActionResult GetSendMessage(int id) 
+        public IActionResult GetSendMessage(int id)
         {
             var value = _contactService.TGetByID(id);
             return Ok(value);
+        }
+        [HttpGet("GetContactCount")]
+        public IActionResult GetContactCount()
+        {
+            return Ok(_contactService.TGetContactCount());
         }
     }
 }
