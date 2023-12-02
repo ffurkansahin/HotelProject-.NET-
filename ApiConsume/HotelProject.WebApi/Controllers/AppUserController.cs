@@ -21,5 +21,11 @@ namespace HotelProject.WebApi.Controllers
             var values = _appUserService.TUserListWithWorkLocation();
             return Ok(values);
         }
+        [HttpGet("AppUserList")]
+        public IActionResult AppUserList()
+        {
+            var values = _appUserService.TGetList();
+            return Ok(values);
+        }
     }
 }
