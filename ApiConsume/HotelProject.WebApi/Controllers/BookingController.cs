@@ -16,7 +16,7 @@ namespace HotelProject.WebApi.Controllers
             _bookingService = bookingService;
         }
         [HttpGet]
-        public IActionResult BookingList() 
+        public IActionResult BookingList()
         {
             var values = _bookingService.TGetList();
             return Ok(values);
@@ -28,7 +28,7 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
         }
         [HttpDelete("{id}")]
-        public IActionResult DeleteBooking(int id) 
+        public IActionResult DeleteBooking(int id)
         {
             var values = _bookingService.TGetByID(id);
             _bookingService.TDelete(values);
@@ -52,10 +52,22 @@ namespace HotelProject.WebApi.Controllers
             _bookingService.TBookingStatusChangeApproved(booking);
             return Ok();
         }
-        [HttpPut("UpdateBookingStatus2")]
-        public IActionResult UpdateBookingStatus2(int id)
+        [HttpGet("ChangeBookingStatusToApproved")]
+        public IActionResult ChangeBookingStatusToApproved(int id)
         {
-            _bookingService.TBookingStatusChangeApproved2(id);
+            _bookingService.TChangeBookingStatusToApproved(id);
+            return Ok();
+        }
+        [HttpGet("ChangeBookingStatusToCanceled")]
+        public IActionResult ChangeBookingStatusToCanceled(int id)
+        {
+            _bookingService.TChangeBookingStatusToCanceled(id);
+            return Ok();
+        }
+        [HttpGet("ChangeBookingStatusToCall")]
+        public IActionResult ChangeBookingStatusToCall(int id)
+        {
+            _bookingService.TChangeBookingStatusToCall(id);
             return Ok();
         }
     }
