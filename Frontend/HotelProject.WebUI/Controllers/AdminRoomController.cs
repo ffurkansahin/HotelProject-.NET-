@@ -1,4 +1,5 @@
-﻿using HotelProject.WebUI.Dtos.RoomDto;
+﻿using HotelProject.EntityLayer.Concrete;
+using HotelProject.WebUI.Dtos.RoomDto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -72,6 +73,7 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateRoom(UpdateRoomDto updateRoomDto)
         {
+            updateRoomDto.RoomCoverImage = updateRoomDto.RoomCoverImage;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateRoomDto);
             StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");
