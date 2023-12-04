@@ -73,7 +73,6 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateRoom(UpdateRoomDto updateRoomDto)
         {
-            updateRoomDto.RoomCoverImage = updateRoomDto.RoomCoverImage;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateRoomDto);
             StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");

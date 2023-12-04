@@ -6,6 +6,8 @@
 
 <form method="post">
     <input type="hidden" asp-for="RoomID" />
+    <input type="hidden" asp-for="RoomCoverImage" />
+    <input type="hidden" asp-for="WifiCount" />
 
     <label>Oda Numarası</label>
     <input type="text" asp-for="RoomNumber" class="form-control" />
@@ -14,6 +16,7 @@
     <label>Oda Başlığı</label>
     <input type="text" asp-for="Title" class="form-control" />
     <br />
+    
 
     <label>Oda Ücreti</label>
     <input type="text" asp-for="Price" class="form-control" />

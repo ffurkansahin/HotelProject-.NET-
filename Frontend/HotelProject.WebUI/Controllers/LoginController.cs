@@ -3,6 +3,7 @@ using HotelProject.WebUI.Dtos.LoginDto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1.Mozilla;
 
 namespace HotelProject.WebUI.Controllers
 {
@@ -37,6 +38,12 @@ namespace HotelProject.WebUI.Controllers
                 }
             }
             return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> SignOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
         }
     }
 }

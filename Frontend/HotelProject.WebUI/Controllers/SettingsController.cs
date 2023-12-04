@@ -19,7 +19,7 @@ namespace HotelProject.WebUI.Controllers
         {
             var user = await _userManager.FindByNameAsync(User.Identity?.Name);
             UserEditViewModel userViewModel = new UserEditViewModel();
-            userViewModel.Name = user.UserName;
+            userViewModel.Name = user.Name;
             userViewModel.Surname = user.Surname;
             userViewModel.Username = user.UserName;
             userViewModel.Email = user.Email;
