@@ -16,7 +16,7 @@ namespace HotelProject.WebUI.ViewComponents.Dashboard
                 RequestUri = new Uri("https://instagram-profile1.p.rapidapi.com/getprofileinfo/alprivatzbe"),
                 Headers =
     {
-        { "X-RapidAPI-Key", "dc04da7c79msh9da45c426324cc9p15f629jsn240eff27183a" },
+        { "(RAPID API KEY)" },
         { "X-RapidAPI-Host", "instagram-profile1.p.rapidapi.com" },
     },
             };
@@ -36,7 +36,7 @@ namespace HotelProject.WebUI.ViewComponents.Dashboard
                     RequestUri = new Uri("https://twitter154.p.rapidapi.com/user/details?username=ffurkan_sahinn&user_id=96479162"),
                     Headers =
     {
-        { "X-RapidAPI-Key", "dc04da7c79msh9da45c426324cc9p15f629jsn240eff27183a" },
+        { "(RAPID API KEY)" },
         { "X-RapidAPI-Host", "twitter154.p.rapidapi.com" },
     },
                 };
@@ -57,7 +57,7 @@ namespace HotelProject.WebUI.ViewComponents.Dashboard
                     RequestUri = new Uri("https://fresh-linkedin-profile-data.p.rapidapi.com/get-linkedin-profile?linkedin_url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ffurkan-%25C5%259Fahin-62759a278%2F&include_skills=false"),
                     Headers =
     {
-        { "X-RapidAPI-Key", "dc04da7c79msh9da45c426324cc9p15f629jsn240eff27183a" },
+        { "(RAPID API KEY)" },
         { "X-RapidAPI-Host", "fresh-linkedin-profile-data.p.rapidapi.com" },
     },
                 };
