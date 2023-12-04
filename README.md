@@ -10,3 +10,4 @@ Technologies Used:
 Project Content:
 
 The Hotel Management System encompasses a powerful and widely used admin dynamic interface and a WebUI that provides ease of use for users in managing a hotel.
+![resim](https://github.com/ffurkansahin/HotelProject/assets/134591555/7f2ad4c4-7c1d-4cb4-a6ae-c974962ca2b9)
